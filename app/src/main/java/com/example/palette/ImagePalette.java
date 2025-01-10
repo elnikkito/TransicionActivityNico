@@ -19,5 +19,14 @@ public class ImagePalette extends AppCompatActivity {
         // Configura la imagen en el ImageView
         ImageView imageView = findViewById(R.id.imageView);
         imageView.setImageResource(selectedImage);
+
+        overridePendingTransition(R.anim.fade_in, R.anim.slide_out);
+
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.fade_in, R.anim.slide_out);
     }
 }
